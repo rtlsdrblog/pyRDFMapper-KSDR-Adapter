@@ -66,6 +66,8 @@ def do_process():
         print(err)
     except requests.exceptions.RequestException as err:
         print(err)
+	except ET.ParseError as err:
+        print(err)
 
 
 def calculate(s_lat: float, s_lng: float, doa: float, my_bearing: float) -> (float, float):
