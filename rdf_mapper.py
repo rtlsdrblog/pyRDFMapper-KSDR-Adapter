@@ -69,7 +69,7 @@ def do_process():
 
 
 def calculate(s_lat: float, s_lng: float, doa: float, my_bearing: float) -> (float, float):
-    theta = math.radians(my_bearing + doa - 360)
+    theta = math.radians(my_bearing + (360 - doa))
     s_lat_in_rad = math.radians(s_lat)
     s_lng_in_rad = math.radians(s_lng)
     e_lat = math.asin(math.sin(s_lat_in_rad) * math.cos(line_length / R) + math.cos(s_lat_in_rad) * math.sin(line_length / R) * math.cos(theta))
