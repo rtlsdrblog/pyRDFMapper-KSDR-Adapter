@@ -66,7 +66,7 @@ def do_process():
         print(err)
     except requests.exceptions.RequestException as err:
         print(err)
-        except ET.ParseError as err:
+    except ET.ParseError as err:
         print(err)
 
 
